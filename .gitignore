@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Include these files
+.gitconfig
+.bash_profile

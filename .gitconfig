@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+    name = JKHCODE
+    email =
+[alias]
+    lp = log --pretty=oneline --abbrev-commit
+    co = checkout
+    br = branch
+    st = status
+    amend = commit --amend --date='now()' --no-edit
+    cm = commit
+    count = rev-list master.. --count
+    prune = remote prune origin
+    fp = "!f() { git push --set-upstream origin $1; };f"
+    mgbr = "!f() { git branch --merged | grep -v "master"; };f"
+    brd = "!f() { git br -d $(git branch --merged | grep -v "master"); };f"
