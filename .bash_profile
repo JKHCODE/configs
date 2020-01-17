@@ -1,8 +1,10 @@
-# function to show git branch in terminal prompt
+# Function to show git branch in terminal prompt
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/>(\1)/'
 }
 
+# Same has above, but without ">" and surounding parens.
+# This is used for git commits that require naming origin branch
 gitbr() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
