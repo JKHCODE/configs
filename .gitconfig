@@ -13,7 +13,7 @@
     # count number of commits on branch
     count = rev-list master.. --count
     # prune remote branches that have been merged
-    prune = remote prune origin
+    prn = remote prune origin
     pop = stash pop
     # "first push" pushes a local branch to remote repo where branch doesn't yet exist
     fp = "!f() { git push --set-upstream origin $1; };f"

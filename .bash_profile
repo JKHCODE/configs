@@ -20,6 +20,8 @@ export PS1="\[\033[01;35m\]\u\[\033[m\]:\[\033[36;1m\]\W\[\033[31m\]\$(parse_git
 # terminal output coloring
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+# Avoid error when using Spark loacally
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # set aliases
 alias ls='ls -GFh'
