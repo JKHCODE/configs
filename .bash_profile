@@ -22,6 +22,9 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 # Avoid error when using Spark loacally
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# Needed for homebrew to link to Mac OS OpenSSL
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 # set aliases
 alias ls='ls -GFh'

@@ -10,13 +10,16 @@
     # amend last commit with no edit to message and update date
     amend = commit --amend --date='now()' --no-edit
     cm = commit
+    rbm = rebase master
     # count number of commits on branch
     count = rev-list master.. --count
     # prune remote branches that have been merged
-    prn = remote prune origin
+    prun = remote prune origin
     pop = stash pop
-    # "first push" pushes a local branch to remote repo where branch doesn't yet exist
-    fp = "!f() { git push --set-upstream origin $1; };f"
+    # force push
+    pf = push -f
+    # "push origin" pushes a local branch to remote repo where branch doesn't yet exist
+    po = "!f() { git push --set-upstream origin $1; };f"
     # "merged branches" lists all local branches that have been merged to master on repo
     mgbr = "!f() { git branch --merged | grep -v "master"; };f"
     # "branch delete" deletes local branches that have been merged to master on repo
