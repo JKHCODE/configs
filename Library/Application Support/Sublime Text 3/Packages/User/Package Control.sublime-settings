@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"Compare Side-By-Side",
+		"EditorConfig",
+		"Highlight Trailing Whitespace",
+		"Highlight Whitespaces",
+		"isort",
+		"Package Control",
+		"RawLineEdit",
+		"SideBarEnhancements",
+		"sublack",
+		"SublimeLinter",
+		"SublimeLinter-addon-black-for-flake",
+		"SublimeLinter-flake8",
+		"Sync View Scroll",
+		"Theme - Monokai Pro",
+		"TrailingSpaces",
+		"Unicode Character Highlighter"
+	]
+}
