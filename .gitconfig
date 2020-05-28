@@ -11,6 +11,7 @@
     amend = commit --amend --date='now()' --no-edit
     cm = commit
     rbm = rebase master
+    rbc = rebase --continue
     # count number of commits on branch
     count = rev-list master.. --count
     # prune remote branches that have been merged

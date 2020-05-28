@@ -10,27 +10,47 @@ gitbr() {
 }
 
 # Set PATH and environment variables
-export PATH=/Users/jhyer/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/pycodestyle
+#export PATH=/Users/jhyer/.pyenv/shims:
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/pycodestyle
+
 export PYSPARK_DRIVER_PYTHON=ipython
 # export SPARK_HOME=/Users/jhyer/git/rocket-backend/scoring/venv/lib/python3.6/site-packages/pyspark
 export PATH=$PATH:/Users/jhyer/bin
 # export VIRTUALENV_TEST_VAR=~/git/rocket-backend/scoring/venv/lib
+
 # prompt formatting
 export PS1="\[\033[01;35m\]\u\[\033[m\]:\[\033[36;1m\]\W\[\033[31m\]\$(parse_git_branch)\[\033[00m\]$"
+
 # terminal output coloring
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
 # Avoid error when using Spark loacally
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Needed for homebrew to link to Mac OS OpenSSL
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# Pipenv
+export PIPENV_VENV_IN_PROJECT=1
+
+# git tab completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+   . $(brew --prefix)/etc/bash_completion
+fi
 
 # set aliases
 alias ls='ls -GFh'
 alias ll='ls -la'
 alias rr='rm -rf'
 
+# Add npm to $PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add pyenv shims to $PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
