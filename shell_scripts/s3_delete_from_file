@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# first var is file of files to delete
+# second var is s3 bucket prefix
+# single quotes trips-up xargs
+# use tr to replace newline with a null terminator
+# -0 tells xargs that input is null terminated
+cat $1 | tr '\n' '\0' | xargs -I{} -0 aws s3 rm $2"{}"

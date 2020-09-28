@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# first var is s3 bucket/key
+# second var is date filter
+# use awk to strip excess white space and filter by date
+# use cut to print space delim columns 4 to end of line
+d=$2
+aws s3 ls --recursive  $1 | awk -v date="$d" '$1=$1 {if ($1 < date) {print}}' | cut -d " " -f 4-
