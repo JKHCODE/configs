@@ -14,7 +14,7 @@ gitbr() {
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/pycodestyle
 
 export PYSPARK_DRIVER_PYTHON=ipython
-# export SPARK_HOME=/Users/jhyer/git/rocket-backend/scoring/venv/lib/python3.6/site-packages/pyspark
+# export SPARK_HOME=/Users/jhyer/git/rocket-etl/scoring/venv/lib/python3.6/site-packages/pyspark
 export PATH=$PATH:/Users/jhyer/bin
 # export VIRTUALENV_TEST_VAR=~/git/rocket-backend/scoring/venv/lib
 

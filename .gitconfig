@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
     name = JKHCODE
-    email =
+	  email = 2652227+JKHCODE@users.noreply.github.com
 [alias]
     lp = log --pretty=oneline --abbrev-commit
     co = checkout
@@ -25,3 +25,8 @@
     mgbr = "!f() { git branch --merged | grep -v "master"; };f"
     # "branch delete" deletes local branches that have been merged to master on repo
     brd = "!f() { git br -d $(git branch --merged | grep -v "master"); };f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
