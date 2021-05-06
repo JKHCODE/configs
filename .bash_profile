@@ -9,6 +9,16 @@ gitbr() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
+# Function to forward port 4040 
+kcpf() {
+    kubectl port-forward $1 4040
+}
+
+# Function to kill kubectl jobs listening to port 4040
+kcpfk() {
+  lsof -nPi :4040 | awk '{if($1 == "kubectl"){print $2; exit}}' | xargs kill -9
+}
+
 # Set PATH and environment variables
 #export PATH=/Users/jhyer/.pyenv/shims:
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/pycodestyle
@@ -44,6 +54,13 @@ fi
 alias ls='ls -GFh'
 alias ll='ls -la'
 alias rr='rm -rf'
+alias bsp='bash build.sh spark jhyer-1'
+alias bpy='bash build.sh python jhyer-1'
+alias kpods='kubectl get pods'
+alias kjobs='kubectl get jobs'
+alias kc='kubectl'
+alias kcc='kubectl create -f'
+alias kcd='kubectl delete -f'
 
 # Add npm to $PATH
 export NVM_DIR="$HOME/.nvm"
