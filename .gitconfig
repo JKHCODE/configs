@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
     name = JKHCODE
-	  email = 2652227+JKHCODE@users.noreply.github.com
+    email = 2652227+JKHCODE@users.noreply.github.com
 [alias]
     lp = log --pretty=oneline --abbrev-commit
     co = checkout
@@ -10,10 +10,10 @@
     # amend last commit with no edit to message and update date
     amend = commit --amend --date='now()' --no-edit
     cm = commit
-    rbm = rebase master
+    rbm = rebase main
     rbc = rebase --continue
     # count number of commits on branch
-    count = rev-list master.. --count
+    count = rev-list main.. --count
     # prune remote branches that have been merged
     prun = remote prune origin
     pop = stash pop
@@ -22,9 +22,9 @@
     # "push origin" pushes a local branch to remote repo where branch doesn't yet exist
     po = "!f() { git push --set-upstream origin $1; };f"
     # "merged branches" lists all local branches that have been merged to master on repo
-    mgbr = "!f() { git branch --merged | grep -v "master"; };f"
+    mgbr = "!f() { git branch --merged | grep -v "main"; };f"
     # "branch delete" deletes local branches that have been merged to master on repo
-    brd = "!f() { git br -d $(git branch --merged | grep -v "master"); };f"
+    brd = "!f() { git br -d $(git branch --merged | grep -v "main"); };f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

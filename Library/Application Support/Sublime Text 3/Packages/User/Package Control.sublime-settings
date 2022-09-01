@@ -2,6 +2,12 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"BracketHighlighter",
+		"EditorConfig",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"Theme - Monokai Pro"
 	],
 	"installed_packages":
 	[
@@ -10,7 +16,6 @@
 		"Compare Side-By-Side",
 		"EditorConfig",
 		"Highlight Trailing Whitespace",
-		"Highlight Whitespaces",
 		"isort",
 		"Package Control",
 		"RawLineEdit",

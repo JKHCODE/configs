@@ -10,9 +10,9 @@ gitbr() {
 }
 
 # Function to forward port 4040 
-kcpf() {
-    kubectl port-forward $1 4040
-}
+# kcpf() {
+#     kubectl port-forward $1 4040
+# }
 
 # Function to kill kubectl jobs listening to port 4040
 kcpfk() {
@@ -61,6 +61,7 @@ alias kjobs='kubectl get jobs'
 alias kc='kubectl'
 alias kcc='kubectl create -f'
 alias kcd='kubectl delete -f'
+alias kcpf='kubectl port-forward'
 
 # Add npm to $PATH
 export NVM_DIR="$HOME/.nvm"

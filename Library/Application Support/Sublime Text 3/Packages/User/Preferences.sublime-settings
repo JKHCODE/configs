@@ -11,6 +11,12 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"BracketHighlighter",
+		"EditorConfig",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"Theme - Monokai Pro",
 		"Vintage"
 	],
 	"spell_check": true,
